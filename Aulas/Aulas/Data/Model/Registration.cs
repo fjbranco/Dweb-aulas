@@ -17,5 +17,6 @@ namespace Aulas.Data.Model
       //  [Key]
         public int CourseFK { get; set; }
         public Course Course { get; set; } = null!;
+
     }
 }
