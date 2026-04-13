@@ -16,5 +16,11 @@ namespace Aulas.Data.Model
         public int DegreeFK { get; set; }
         public Degree Degree { get; set; } = null!;
 
+
+        /// <summary>
+        /// Lista de Registos
+        /// </summary>
+        public ICollection<Registration> Registrations { get; set; } = [];
+
     }
 }

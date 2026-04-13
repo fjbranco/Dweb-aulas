@@ -24,5 +24,11 @@ namespace Aulas.Data.Model
         /// </summary>
         public ICollection<Professor> ListaProfessores { get; set; } = [];
 
+
+        /// <summary>
+        /// Lista de Registos
+        /// </summary>
+        public ICollection<Registration> ListaRegistrations { get; set; } = [];
+
     }
 }

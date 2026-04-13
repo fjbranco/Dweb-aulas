@@ -1,9 +1,20 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Aulas.Data.Model;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Aulas.Data
 {
-    public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : IdentityDbContext(options)
+    public class ApplicationDbContext(
+        DbContextOptions<ApplicationDbContext> options)
+        : IdentityDbContext(options)
     {
+
+        /* tabelas da base de dados */
+        public DbSet<MyUser> MyUsers { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Professor> Professors { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Registration> Registrations { get; set; }
+        public DbSet<Degree> Degrees { get; set; }
     }
 }
